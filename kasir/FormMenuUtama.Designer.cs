@@ -76,6 +76,7 @@
             menuLogout.Name = "menuLogout";
             menuLogout.Size = new Size(180, 22);
             menuLogout.Text = "Logout";
+            menuLogout.Click += menuLogout_Click;
             // 
             // toolStripMenuItem1
             // 
@@ -99,13 +100,14 @@
             // menuKasir
             // 
             menuKasir.Name = "menuKasir";
-            menuKasir.Size = new Size(111, 22);
+            menuKasir.Size = new Size(180, 22);
             menuKasir.Text = "Kasir";
+            menuKasir.Click += menuKasir_Click;
             // 
             // menuBarang
             // 
             menuBarang.Name = "menuBarang";
-            menuBarang.Size = new Size(111, 22);
+            menuBarang.Size = new Size(180, 22);
             menuBarang.Text = "Barang";
             // 
             // menuTransaksi
@@ -178,23 +180,22 @@
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
         private ToolStripMenuItem menuFile;
-        private ToolStripMenuItem menuLogin;
-        private ToolStripMenuItem menuLogout;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem exitToolStripMenuItem;
-        private ToolStripMenuItem menuMaster;
         private ToolStripMenuItem menuKasir;
         private ToolStripMenuItem menuBarang;
-        private ToolStripMenuItem menuTransaksi;
         private ToolStripMenuItem menuPenjualan;
-        private ToolStripMenuItem menuLaporan;
         private ToolStripMenuItem menuLapDataMaster;
         private ToolStripMenuItem menuLapPenjualan;
-        private ToolStripMenuItem menuUtility;
         private ToolStripMenuItem menuGantiPassword;
         private ToolStripMenuItem menuAbout;
+        public MenuStrip menuStrip1;
+        public ToolStripMenuItem menuLogin;
+        public ToolStripMenuItem menuLogout;
+        public ToolStripMenuItem menuMaster;
+        public ToolStripMenuItem menuTransaksi;
+        public ToolStripMenuItem menuLaporan;
+        public ToolStripMenuItem menuUtility;
     }
 }

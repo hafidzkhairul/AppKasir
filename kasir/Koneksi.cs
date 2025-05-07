@@ -12,7 +12,7 @@ namespace kasir
         public SqlConnection getConn()
         {
             SqlConnection Conn = new SqlConnection();
-            Conn.ConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=appkasir";
+            Conn.ConnectionString = "Data source=MYSTICT;initial catalog=DB_KASIR;integrated security=true";
             return Conn;
         }
     }

@@ -21,14 +21,20 @@ namespace kasir
             SqlConnection conn = Konn.getConn();
             {
                 conn.Open();
-                cmd = new SqlCommand("select * from tbl_kasir where KodeKasir='"+textBox1.Text+"' and PasswordKasir ='"+textBox2.Text+"'", conn);
+                cmd = new SqlCommand("select * from TBL_KASIR where KodeKasir='"+textBox1.Text+"' and PasswordKasir ='"+textBox2.Text+"'", conn);
                 cmd.ExecuteNonQuery();
                 reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    FormMenuUtama frmUtama = new FormMenuUtama();
-                    frmUtama.Show();
-                    this.Hide();
+                    //FormMenuUtama frmUtama = new FormMenuUtama();
+                    //frmUtama.Show();
+                    FormMenuUtama.menu.menuLogin.Enabled = false;
+                    FormMenuUtama.menu.menuLogout.Enabled = true;
+                    FormMenuUtama.menu.menuMaster.Enabled = true;
+                    FormMenuUtama.menu.menuTransaksi.Enabled = true;
+                    FormMenuUtama.menu.menuLaporan.Enabled = true;
+                    FormMenuUtama.menu.menuUtility.Enabled = true;
+                    this.Close();
                 }
                 else
                 {
@@ -52,7 +58,7 @@ namespace kasir
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
