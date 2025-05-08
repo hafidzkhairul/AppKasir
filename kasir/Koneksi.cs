@@ -11,6 +11,7 @@ namespace kasir
     {
         public SqlConnection getConn()
         {
+            //
             SqlConnection Conn = new SqlConnection();
             Conn.ConnectionString = "Data source=MYSTICT;initial catalog=DB_KASIR;integrated security=true";
             return Conn;
