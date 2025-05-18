@@ -67,26 +67,26 @@
             // menuLogin
             // 
             menuLogin.Name = "menuLogin";
-            menuLogin.Size = new Size(180, 22);
+            menuLogin.Size = new Size(112, 22);
             menuLogin.Text = "Login";
             menuLogin.Click += menuLogin_Click;
             // 
             // menuLogout
             // 
             menuLogout.Name = "menuLogout";
-            menuLogout.Size = new Size(180, 22);
+            menuLogout.Size = new Size(112, 22);
             menuLogout.Text = "Logout";
             menuLogout.Click += menuLogout_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(177, 6);
+            toolStripMenuItem1.Size = new Size(109, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(112, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -109,6 +109,7 @@
             menuBarang.Name = "menuBarang";
             menuBarang.Size = new Size(180, 22);
             menuBarang.Text = "Barang";
+            menuBarang.Click += menuBarang_Click;
             // 
             // menuTransaksi
             // 
@@ -120,8 +121,9 @@
             // menuPenjualan
             // 
             menuPenjualan.Name = "menuPenjualan";
-            menuPenjualan.Size = new Size(126, 22);
+            menuPenjualan.Size = new Size(180, 22);
             menuPenjualan.Text = "Penjualan";
+            menuPenjualan.Click += menuPenjualan_Click;
             // 
             // menuLaporan
             // 

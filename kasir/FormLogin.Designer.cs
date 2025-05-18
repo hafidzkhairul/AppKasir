@@ -102,6 +102,7 @@
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form Login Aplikasi Kasir";
+            Load += FormLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

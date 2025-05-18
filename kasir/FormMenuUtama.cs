@@ -23,6 +23,17 @@ namespace kasir
         {
             frmKasir = null;
         }
+        FormMasterBarang frmBarang;
+        void frmBarang_Closed(object sender, FormClosedEventArgs e)
+        {
+            frmBarang = null;
+        }
+
+        FormTransJual frmTransJual;
+        void frmTransJual_Closed(object sender, FormClosedEventArgs e)
+        {
+            frmTransJual = null;
+        }
 
         void menuTerkunci()
         {
@@ -52,6 +63,7 @@ namespace kasir
 
         private void menuLogin_Click(object sender, EventArgs e)
         {
+            //mencegah duplikasi form yg masih dibuka
             if (frmLogin == null)
             {
                 frmLogin = new FormLogin();
@@ -62,8 +74,6 @@ namespace kasir
             {
                 frmLogin.Activate();
             }
-            //FormLogin frmLogin = new FormLogin();
-            //frmLogin.Show();
         }
 
         private void menuLogout_Click(object sender, EventArgs e)
@@ -73,6 +83,7 @@ namespace kasir
 
         private void menuKasir_Click(object sender, EventArgs e)
         {
+
             if (frmKasir == null)
             {
                 frmKasir = new FormMasterKasir();
@@ -82,6 +93,34 @@ namespace kasir
             else
             {
                 frmKasir.Activate();
+            }
+        }
+
+        private void menuBarang_Click(object sender, EventArgs e)
+        {
+            if (frmBarang == null)
+            {
+                frmBarang = new FormMasterBarang();
+                frmBarang.FormClosed += new FormClosedEventHandler(frmBarang_Closed);
+                frmBarang.ShowDialog();
+            }
+            else
+            {
+                frmBarang.Activate();
+            }
+        }
+
+        private void menuPenjualan_Click(object sender, EventArgs e)
+        {
+            if (frmTransJual == null)
+            {
+                frmTransJual = new FormTransJual();
+                frmTransJual.FormClosed += new FormClosedEventHandler(frmTransJual_Closed);
+                frmTransJual.ShowDialog();
+            }
+            else
+            {
+                frmTransJual.Activate();
             }
         }
     }
