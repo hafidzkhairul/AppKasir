@@ -37,7 +37,7 @@ namespace kasir
                     FormMenuUtama.menu.menuLogin.Enabled = false;
                     FormMenuUtama.menu.menuLogout.Enabled = true;
                     //Menu master hanya bisa dibuka oleh admin 
-                    if(LevelKasir.Trim() == "ADMIN")
+                    if (LevelKasir.Trim() == "ADMIN")
                     {
                         FormMenuUtama.menu.menuMaster.Enabled = true;
                     }
@@ -68,6 +68,22 @@ namespace kasir
             textBox2.PasswordChar = '*';
             //textBox1.Text = "ADM001";
             //textBox2.Text = "ADMIN";
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                button1.PerformClick();
+            }
         }
     }
 }

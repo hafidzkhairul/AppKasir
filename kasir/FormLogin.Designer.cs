@@ -60,6 +60,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(163, 23);
             textBox1.TabIndex = 2;
+            textBox1.KeyPress += textBox1_KeyPress;
             // 
             // textBox2
             // 
@@ -67,6 +68,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(163, 23);
             textBox2.TabIndex = 3;
+            textBox2.KeyPress += textBox2_KeyPress;
             // 
             // button1
             // 
